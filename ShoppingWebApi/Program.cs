@@ -1,3 +1,4 @@
+
 using Microsoft.EntityFrameworkCore;
 using ShoppingWebApi.EfCore;
 
@@ -7,10 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddDbContext<EF_DataContext>(
-                o => o.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSQL 15")
-                               
-                );
-
+                o => o.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSQL 15"))
+            );
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -34,3 +33,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+  
+  

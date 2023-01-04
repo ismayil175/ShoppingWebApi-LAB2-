@@ -13,7 +13,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ProductContext>(options =>
     options
-        .UseNpgsql(builder.Configuration.GetConnectionString("ismayil")
+        .UseNpgsql(builder.Configuration.GetConnectionString("PostgreSQL 15")
         .UseSnakeCaseNamingConvention());
 
 builder.Services.AddScoped<ProductService>();

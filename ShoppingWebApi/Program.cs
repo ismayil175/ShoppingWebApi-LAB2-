@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<EF_DataContext>(
                 o => o
-                .UseNpgsql(builder.Configuration.GetConnectionString(""Server=localhost;Database=gijdllax;Port=5432;User Id=postgres;Password=30032003xoxuisI1!;")
+                .UseNpgsql(builder.Configuration.GetConnectionString("Server=localhost;Database=gijdllax;Port=5432;User Id=postgres;Password=30032003xoxuisI1!;")
                 .UseSnakeCaseNamingConvention());
                
 

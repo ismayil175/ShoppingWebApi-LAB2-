@@ -9,7 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<EF_DataContext>(
                 o => o
-                .UseNpgsql(builder.Configuration.GetConnectionString("Host=nam-sur-group.postgres.database.azure.com;Database=postgres;Username=ismayil;Password=30032003xoxuisI1!"));
+                .UseNpgsql(builder.Configuration.GetConnectionString("Host=nam-sur-group.postgres.database.azure.com;Database=postgres;Username=ismayil;Password=30032003xoxuisI1!"))
+);
                
 
 

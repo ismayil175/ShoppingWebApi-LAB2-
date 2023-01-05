@@ -8,8 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddDbContext<EF_DataContext>(
-                o => o.UseNpgsql(builder.Configuration.GetConnectionString("Postgres 15"))
-            );
+                o => o
+                .UseNpgsql(builder.Configuration.GetConnectionString("Host=nam-sur-group.postgres.database.azure.com;Database=postgres;Username=ismayil;Password=30032003xoxuisI1!"))
+                .UseSnakeCaseNamingConvention());
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

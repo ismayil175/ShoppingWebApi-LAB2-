@@ -6,10 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-
 builder.Services.AddDbContext<EF_DataContext>(
                 o => o
-                .UseNpgsql(builder.Configuration.GetConnectionString("Host=nam-sur-group.postgres.database.azure.com;Database=postgres;Username=ismayil;Password=30032003xoxuisI1!"))
+                .UseNpgsql(builder.Configuration.GetConnectionString(""Server=localhost;Database=gijdllax;Port=5432;User Id=postgres;Password=30032003xoxuisI1!;"))
                 .UseSnakeCaseNamingConvention());
                
 
